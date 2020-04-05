@@ -1,0 +1,170 @@
+/* Tag css start */
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
+  padding: 0px;
+  margin: 0px;
+  background: #e9e9e9;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+/* Tag css end */
+
+
+/* Nav Bar css start */
+.nav-bar {
+  background: black;
+  color: white;
+}
+
+.nav-bar h2 {
+  flex: 1;
+  margin: 5px;
+}
+/* Nav Bar css end */
+
+
+/* Container css start */
+.container {
+  align-items: center;
+  justify-content: center;
+  height: 70vh;
+}
+
+.container form {
+  padding: 10px;
+}
+
+.container input {
+  margin: 5px 0px;
+  font-size: 1rem;
+  padding: 10px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+}
+
+.container input[type="submit"] {
+  outline: none;
+  background: black;
+  color: white;
+}
+
+.container input[type="submit"]:hover {
+  background: #303030;
+}
+/* Container css end */
+
+
+/* Card css start */
+.card {
+  min-width: 400px;
+  min-height: 450px;
+  border: 1px solid #cccccc;
+  border-radius: 4px;
+  background: white;
+  overflow: hidden;
+}
+
+.option {
+  border-bottom: 1px solid #cccccc;
+  margin-bottom: 30px;
+}
+
+.option-btn {
+  border: none;
+  background: transparent;
+  font-size: 1.2rem;
+  outline: none;
+  flex: 1;
+  padding: 15px;
+}
+
+.option-inactive {
+  background: black;
+  color: white;
+}
+/* Card css end */
+
+
+/* button css start */
+.view-btn {
+  background-color: black;
+  color: white;
+}
+/* button css end */
+
+
+/* table css start */
+#table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  border-color: black;
+  border-radius: 4px;
+}
+
+#table td,
+#table th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+#table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+#table tr:hover {
+  background-color: #ddd;
+}
+
+#table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  background-color: black;
+  color: white;
+}
+
+.table-content {
+  min-height: 450px;
+  min-width: 80%;
+}
+/* table css end */
+
+
+/* common css  start */
+.column-flex {
+  display: flex;
+  flex-direction: column;
+}
+
+.m-t-min {
+  margin-top: 10px !important;
+}
+
+.d-flex {
+  display: flex;
+}
+
+.p-min {
+  padding: 10px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+/* common css  end */

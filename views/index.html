@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Node App</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="/public/stylesheets/style.css">
+</head>
+
+<body>
+
+    <!-- Nav Section start-->
+    <div class="nav-bar d-flex p-min">
+        <h2 class="text-center">App Name</h2>
+    </div>
+    <!-- Nav Section end-->
+
+    <!-- Container Section start-->
+    <div id="container" class="container d-flex">
+
+        <!-- Login / Registration Card start-->
+        <div class="card">
+
+            <!-- Login / Register Button -->
+            <div class="option d-flex" id="option">
+                <button class="option-btn cursor-pointer" type="button" onclick="toggleOption(0)">Login</button>
+                <button class="option-btn option-inactive cursor-pointer" type="button"
+                    onclick="toggleOption(1)">Register</button>
+            </div>
+            <!-- Login / Register Button end -->
+
+            <h3 class="text-center" id="optionSelected">Account Login</h3>
+
+            <!-- Login / Registration Form start -->
+            <form id="form" class="column-flex" name="appForm" action="javascript:onSubmit()">
+                <div class="column-flex">
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="password" minlength="6" name="password" placeholder="Password" required>
+                </div>
+
+                <!-- Registration fields add by client.js -->
+                <div class="column-flex"></div>
+
+                <!-- Form submit button -->
+                <input id="submitBtn" class="m-t-min cursor-pointer" type="submit" value="Login">
+            </form>
+            <!-- Login / Registration Form end -->
+
+        </div>
+        <!-- Login / Registration Card end-->
+
+        <!-- User Table Content start -->
+        <div class="table-content hidden">
+
+            <!-- Display username -->
+            <h3 id="displayName" class="text-center text-capitalize"></h3>
+
+            <!-- View user list button -->
+            <div class="text-center">
+                <input id="userListBtn" class="m-t-min view-btn cursor-pointer" type="button" value="View user list"
+                    onclick="getUserList()">
+            </div>
+
+            <!-- User Details Table start -->
+            <div class="d-flex">
+                <table id="table" class="hidden">
+                    <tr>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>Contact</th>
+                        <th>Role</th>
+                        <th>Permission</th>
+                    </tr>
+                </table>
+            </div>
+            <!-- User Details Table start -->
+
+        </div>
+        <!-- User Table Content end -->
+
+    </div>
+    <!-- Container Section end-->
+
+    <script type="text/javascript" src="/public/javascripts/client.js"></script>
+
+</body>
+
+</html>

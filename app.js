@@ -1,0 +1,43 @@
+// Imports
+let createError = require('http-errors');
+let express = require('express');
+let path = require('path');
+let cookieParser = require('cookie-parser');
+let logger = require('morgan');
+let indexRouter = require('./routes/index.route');
+let usersRouter = require('./routes/user.route');
+
+// App setup 
+const app = express();
+
+app.use(logger('dev'));
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+app.use(cookieParser());
+
+// App routes
+app.use(express.static(path.join(__dirname, 'views')));
+app.use('/', indexRouter);
+app.use('/users', usersRouter);
+app.use('/public', express.static(path.join(__dirname, 'public')));
+
+// Catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  next(createError(404));
+});
+
+// Error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  console.log('mode : ', req.app.get('env'));
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // Render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+
+// Export app
+module.exports = app;
